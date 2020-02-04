@@ -1,7 +1,7 @@
 import setuptools
 from os import path
 
-pkg_name = "raphael_connection_hub"
+pkg_name = "raphael_adapted_graph"
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
@@ -14,10 +14,10 @@ setuptools.setup(
     version=__version__,
     author="Raphael Guzman",
     author_email="raphael.h.guzman@gmail.com",
-    description="Official DataJoint Hub plugin.",
+    description="Official DataJoint Graph Type plugin.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/guzman-raphael/djpyplugin_connection_hub",
+    url="https://github.com/guzman-raphael/djpyplugin_adapted_graph",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -25,9 +25,9 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     setup_requires=['setuptools_certificate'],
-    install_requires=['datajoint', 'requests'],
+    install_requires=['datajoint', 'networkx'],
     privkey_path='~/keys/datajoint-dev.pem',
     entry_points={
-        'datajoint.plugins': 'connection = {}'.format(pkg_name)
+        'datajoint.plugins': 'attribute_adapter = {}'.format(pkg_name)
     },
 )
