@@ -5,3 +5,5 @@ dist
 __pycache__
 *.egg-info
 datajoint-dev.pem
+datajoint
+__main__.py

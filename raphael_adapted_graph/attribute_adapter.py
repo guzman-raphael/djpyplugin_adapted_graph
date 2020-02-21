@@ -1,8 +1,8 @@
-from datajoint.attribute_adapter import AttributeAdapter
+import datajoint as dj
 import networkx as nx
 
 
-class GraphAdapter(AttributeAdapter):
+class GraphAdapter(dj.AttributeAdapter):
 
     attribute_type = 'longblob'  # this is how the attribute will be declared
 

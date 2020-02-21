@@ -28,6 +28,8 @@ setuptools.setup(
     install_requires=['datajoint', 'networkx'],
     privkey_path='~/keys/datajoint-dev.pem',
     entry_points={
-        'datajoint.plugins': 'attribute_adapter = {}'.format(pkg_name)
+        'datajoint_plugins.type': [
+            'graph = {}.attribute_adapter:graph'.format(pkg_name),
+        ],
     },
 )
